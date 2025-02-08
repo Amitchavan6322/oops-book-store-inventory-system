@@ -1,5 +1,8 @@
 package com.amit.book.inventory;
 
+import com.amit.book.inventory.Controller.BookController;
+import com.amit.book.inventory.Controller.CustomerController;
+import com.amit.book.inventory.Controller.SupplierController;
 import com.amit.book.inventory.exception.InvalidBookIDException;
 import com.amit.book.inventory.exception.InvalidBookNameException;
 import com.amit.book.inventory.service.BookService;
@@ -13,49 +16,30 @@ public class BookStoreInventorySystem {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) throws InvalidBookIDException {
-        BookService bookService = new BookService();
-        CustomerService customerService = new CustomerService();
-        SupplierService supplierService = new SupplierService();
+        BookController bookController = new BookController();
+        CustomerController customerController = new CustomerController();
+        SupplierController supplierController = new SupplierController();
 
         int option = 0;
         do {
             System.out.println("Welcome to the Book Store Inventory System");
             System.out.println("Please select option from below list :");
-            System.out.println("1. Fill the book information");
-            System.out.println("2. Display book information");
-            System.out.println("3. Fill the customer information");
-            System.out.println("4. Display customer information");
-            System.out.println("5. Fill supplier information");
-            System.out.println("6. Display supplier information");
+            System.out.println("1. Go to Book Section");
+            System.out.println("2. Go to Customer Section");
+            System.out.println("3. Go to Supplier Section");
             System.out.println("0: Exit project");
             option = Integer.parseInt(sc.nextLine());
 
            switch (option){
                case 1:
-                   try {
-                       bookService.acceptingBookInfo();
-                       break;
-                   } catch (InvalidBookIDException | InvalidBookNameException invalidBookIDException) {
-                       System.err.println(invalidBookIDException.getMessage());
-                   }
-
+                   bookController.run();
+                   break;
                case 2:
-                   bookService.displayBookInfo();
+                   customerController.run();
                    break;
-
                case 3:
-                   customerService.acceptCustomerInfo();
+                   supplierController.run();
                    break;
-
-               case 4:
-                   customerService.displayCustomerInfo();
-                   break;
-
-               case 5:
-                   supplierService.acceptingSupplierInfo();
-
-               case 6:
-                   supplierService.displaySupplierInfo();
            }
 
         }
