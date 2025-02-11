@@ -1,7 +1,5 @@
-package com.amit.book.inventory.Controller;
+package com.amit.book.inventory.controller;
 
-import com.amit.book.inventory.exception.InvalidBookIDException;
-import com.amit.book.inventory.exception.InvalidBookNameException;
 import com.amit.book.inventory.service.CustomerService;
 
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.amit.book.inventory.Controller;
+package com.amit.book.inventory.controller;
 
 import com.amit.book.inventory.service.SupplierService;
 

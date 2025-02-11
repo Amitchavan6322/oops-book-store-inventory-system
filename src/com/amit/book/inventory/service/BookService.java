@@ -1,5 +1,6 @@
 package com.amit.book.inventory.service;
 
+import com.amit.book.inventory.exception.InvalidBookPriceException;
 import com.amit.book.inventory.model.Book;
 import com.amit.book.inventory.model.BookCategory;
 import com.amit.book.inventory.exception.InvalidBookNameException;
@@ -14,7 +15,7 @@ public class BookService extends LibraryService {
     private HashMap<Integer, Book> books = new HashMap<>();
     private Scanner scanner = new Scanner(System.in);
 
-    public void acceptingBookInfo() throws InvalidBookIDException, InvalidBookNameException {
+    public void acceptingBookInfo() throws InvalidBookIDException, InvalidBookNameException, InvalidBookPriceException {
 
         if (isBookCollectionEmpty()) {
             System.out.println("No books currently in the inventory.");
@@ -36,13 +37,12 @@ public class BookService extends LibraryService {
         String name = scanner.nextLine();
         try {
             if ((name.isEmpty())) {
-                throw new IllegalArgumentException("Book name can't be empty");
+                throw new InvalidBookNameException ("Book name can't be empty");
             }
             book.setName(name);
-        } catch (IllegalArgumentException e) {
+        } catch (InvalidBookNameException e) {
             System.out.println("Error: " + e.getMessage());
         }
-
 
             System.out.println("Enter book Author");
             String author = scanner.nextLine();
@@ -53,8 +53,14 @@ public class BookService extends LibraryService {
             book.setPublisher(publisher);
 
             System.out.println("Enter no of book copies");
-            int noOfCopies = Integer.parseInt(scanner.nextLine());
-            book.setNoOfCopies(noOfCopies);
+
+            try {
+                int noOfCopies = Integer.parseInt(scanner.nextLine());
+                book.setNoOfCopies(noOfCopies);
+            } catch (NumberFormatException e) {
+                throw new InvalidBookIDException("Please provide no. of copies in number");
+            }
+
 
             // Updated category input
             System.out.println("Enter book category (Options: ACADEMIC, FICTION, HISTORY, MUSIC)");
@@ -72,13 +78,18 @@ public class BookService extends LibraryService {
             book.setStoreLocation(storeLocation);
 
             System.out.println("Enter book price");
-            int price = Integer.parseInt(scanner.nextLine());
-            book.setPrice(price);
-
+            try {
+                int price = Integer.parseInt(scanner.nextLine());
+                book.setPrice(price);
+            } catch (NumberFormatException e) {
+                throw new InvalidBookPriceException("Invalid book price please provide valid id");
+            }
+            //System.out.println("Book to be added: " + book);
             books.put(bookId, book);
         }
 
         public void displayBookInfo () {
+            System.out.println("inside display book info map size = " +books.size());
             for (Map.Entry<Integer, Book> set : books.entrySet()) {
                 System.out.println("Book ID: " + set.getKey() + " = Book Info: " + set.getValue());
             }
