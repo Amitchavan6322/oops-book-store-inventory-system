@@ -44,7 +44,8 @@ The Core Java oops book store inventory system project is a basic Java applicati
 
  # Class Diagram
 
-![Class diagram-2025-02-13-162453](https://github.com/user-attachments/assets/c04152aa-cb7f-4d3d-a3d5-87834d9cbbf0)
+![Class diagram-2025-02-13-163321](https://github.com/user-attachments/assets/33c5be30-3170-421d-a94b-a8aec27c0420)
+
 
 
 
