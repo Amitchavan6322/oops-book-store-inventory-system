@@ -44,82 +44,8 @@ The Core Java oops book store inventory system project is a basic Java applicati
 
  # Class Diagram
 
-class BookController {
-    +run()
-}
+![Class diagram-2025-02-13-162453](https://github.com/user-attachments/assets/c04152aa-cb7f-4d3d-a3d5-87834d9cbbf0)
 
-class CustomerController {
-    +run()
-}
-
-class SupplierController {
-    +run()
-}
-
-class BookService {
-    +acceptingBookInfo()
-    +displayBookInfo()
-    +getBookById(bookId: int)
-    +removeBookById(bookId: int)
-    +updateBookPrice(bookId: int, newPrice: int)
-}
-
-class CustomerService {
-    +acceptCustomerInfo()
-    +displayCustomerInfo()
-}
-
-class SupplierService {
-    +acceptSupplierInfo()
-    +displaySupplierInfo()
-}
-
-class Book {
-    +setBookID(id: int)
-    +setName(name: String)
-    +setAuthor(author: String)
-    +setPublisher(publisher: String)
-    +setNoOfCopies(copies: int)
-    +setCategory(category: BookCategory)
-    +setStoreLocation(location: String)
-    +setPrice(price: int)
-}
-
-class Customer {
-    +setCustomerID(id: int)
-    +setCustomerName(name: String)
-    +setCustomerAddress(address: String)
-    +setCustomerContact(contact: Long)
-    +setEmailID(emailID: String)
-}
-
-class Supplier {
-    // Define supplier attributes and methods here
-}
-
-class InvalidBookIDException {
-    // Exception details
-}
-
-<<interface>> InventoryServiceInterface
-InventoryServiceInterface <|.. BookService
-InventoryServiceInterface <|.. CustomerService
-InventoryServiceInterface <|.. SupplierService
-
-class BaseService {
-    // Common properties or methods for services
-}
-
-BaseService <|-- BookService
-BaseService <|-- CustomerService
-BaseService <|-- SupplierService
-
-BookStoreInventorySystem --> BookController
-BookStoreInventorySystem --> CustomerController
-BookStoreInventorySystem --> SupplierController
-
-BookController --> BookService
-CustomerController --> CustomerService
 
 
 
