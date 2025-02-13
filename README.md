@@ -106,23 +106,15 @@ classDiagram
         // Exception details
     }
 
-    <<interface>> InventoryServiceInterface
-    InventoryServiceInterface <|.. BookService
-    InventoryServiceInterface <|.. CustomerService
-    InventoryServiceInterface <|.. SupplierService
-
-    class BaseService {
-        // Common properties or methods for services
-    }
-    
-    BaseService <|-- BookService
-    BaseService <|-- CustomerService
-    BaseService <|-- SupplierService
-
     BookStoreInventorySystem --> BookController
     BookStoreInventorySystem --> CustomerController
     BookStoreInventorySystem --> SupplierController
 
     BookController --> BookService
     CustomerController --> CustomerService
+    SupplierController --> SupplierService
+
+    BookService --> Book
+    CustomerService --> Customer
+
 
