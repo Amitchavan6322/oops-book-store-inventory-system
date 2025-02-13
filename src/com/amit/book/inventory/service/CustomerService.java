@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Scanner;
 
-public class CustomerService {
+public class CustomerService implements CustomerServiceInterface{
 
     private HashMap<Integer, Customer> customers = new HashMap<>();
     private Scanner scanner = new Scanner(System.in);

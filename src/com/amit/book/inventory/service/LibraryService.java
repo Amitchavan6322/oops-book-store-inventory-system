@@ -5,7 +5,7 @@ import com.amit.book.inventory.exception.InvalidBookIDException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LibraryService {
+public abstract class LibraryService {
 
     protected HashMap<Integer, Book> books = new HashMap<>();
 

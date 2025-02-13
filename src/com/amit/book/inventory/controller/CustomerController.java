@@ -10,6 +10,7 @@ public class CustomerController {
 
     public void run() {
         int option = 0;
+        CustomerService customerService = new CustomerService();
         do {
             System.out.println("Please select option from below list :");
             System.out.println("1. Fill the customer information");
@@ -17,7 +18,7 @@ public class CustomerController {
             System.out.println("9: Go back to main menu");
             option = Integer.parseInt(scanner.nextLine());
 
-            CustomerService customerService = new CustomerService();
+
             switch (option) {
                 case 1:
                     customerService.acceptCustomerInfo();

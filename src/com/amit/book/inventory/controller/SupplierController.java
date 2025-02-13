@@ -10,6 +10,7 @@ public class SupplierController {
 
     public void run() {
         int option = 0;
+        SupplierService supplierService = new SupplierService();
         do {
             System.out.println("Please select option from below list :");
             System.out.println("1. Fill supplier information");
@@ -17,7 +18,7 @@ public class SupplierController {
             System.out.println("9: Go back to main menu");
             option = Integer.parseInt(scanner.nextLine());
 
-            SupplierService supplierService = new SupplierService();
+
             switch (option) {
                 case 1:
                     supplierService.acceptingSupplierInfo();

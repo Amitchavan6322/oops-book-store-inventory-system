@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea328ceb-f466-4fcb-bdea-98cf815be333" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/exception/InvalidBookPriceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/service/BookServiceInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/service/CustomerServiceInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/service/SupplierServiceInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/amit/book/inventory/BookStoreInventorySystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/BookStoreInventorySystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/amit/book/inventory/Controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/amit/book/inventory/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/amit/book/inventory/Controller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/controller/SupplierController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/amit/book/inventory/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/amit/book/inventory/controller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/controller/SupplierController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/amit/book/inventory/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/amit/book/inventory/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/amit/book/inventory/service/LibraryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/service/LibraryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/amit/book/inventory/service/SupplierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/amit/book/inventory/service/SupplierService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -37,17 +42,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BookStoreInventorySystem.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/_training/oops-book-store-inventory-system&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BookStoreInventorySystem.executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/_training/oops-book-store-inventory-system",
+    "settings.editor.selected.configurable": "build.tools"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.amit.book.inventory.Controller" />

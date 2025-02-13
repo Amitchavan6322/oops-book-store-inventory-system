@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Scanner;
 
-public class SupplierService {
+public class SupplierService implements SupplierServiceInterface {
 
     private HashMap<Integer, Supplier> suppliers = new HashMap<>();
     private Scanner scanner = new Scanner(System.in);

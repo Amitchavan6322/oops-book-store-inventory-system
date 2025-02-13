@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class BookService extends LibraryService {
+public class BookService extends LibraryService implements BookServiceInterface {
 
     private HashMap<Integer, Book> books = new HashMap<>();
     private Scanner scanner = new Scanner(System.in);
